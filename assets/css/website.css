@@ -12,6 +12,11 @@ body {
   font-family: "Minecraftia", sans-serif;
 }
 
+.main-buttons {
+  width: 100%;
+  padding: 0 10px;
+}
+
 .cover::before {
   position: absolute;
   inset: 0;
@@ -26,8 +31,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
   flex-direction: column;
-  height: 480px;
+  padding-bottom: 80px;
+  height: 580px;
   width: 100%;
 }
 .cover .logo-parent {
@@ -35,14 +42,15 @@ body {
   margin-bottom: 120px;
 }
 .cover .logo-parent .logo {
-  transform: scale(1.7);
+  image-rendering: pixelated;
+  transform: scale(2);
 }
 .cover .logo-parent .splash-text {
   animation: splash 0.5s infinite linear;
   position: absolute;
   top: calc(100% - 14px);
   width: 440px;
-  left: calc(100% - 180px);
+  left: calc(100% - 140px);
   text-align: center;
   color: #ffff00;
   text-shadow: 2px 2px 0 #7f7f00;
@@ -93,6 +101,12 @@ body {
 .mb-2 {
   margin-bottom: 20px;
 }
+.mt-auto {
+  margin-top: auto !important;
+}
+.mb-auto {
+  margin-bottom: auto !important;
+}
 
 details summary {
   cursor: pointer;
@@ -115,6 +129,11 @@ details summary {
   flex-wrap: wrap !important;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
 @keyframes splash {
   0% {
     transform: scale(1) rotate(-20deg);
@@ -132,4 +151,41 @@ details summary {
 }
 .text-sm {
   font-size: 14px;
+}
+
+.card {
+  background: #ccc;
+  border-top: 2px solid rgb(255, 255, 255, 0.6);
+  border-left: 2px solid rgb(255, 255, 255, 0.6);
+  border-right: 2px solid rgb(0, 0, 0, 0.3);
+  border-bottom: 2px solid rgb(0, 0, 0, 0.3);
+  text-shadow: none !important;
+  color: #5b5b5b;
+  box-shadow: 0 0 0 2px #000000;
+  padding: 20px;
+}
+.card img {
+  box-shadow: 0 0 0 2px #000000;
+}
+.card .header {
+  text-shadow: none !important;
+  color: #000000;
+}
+
+.h-100 {
+  height: 100%;
+}
+.w-100 {
+  width: 100%;
+}
+
+.px-0 {
+  padding: 0 !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+.flex-column {
+  flex-direction: column !important;
 }
